@@ -3,12 +3,12 @@ export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
   const MALE = 'm';
 
-  const ManOrWomen =
+  const partnerRole =
     sex === `${MALE}`
       ? `${partnerName} is my wife`
       : `${partnerName} is my husband`;
 
-  const partnerStatus = isMarried ? ManOrWomen : `I am not married`;
+  const partnerStatus = isMarried ? partnerRole : `I am not married`;
 
   return (
     <section className="Person">
